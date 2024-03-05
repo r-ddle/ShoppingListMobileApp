@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=JetBrains%20Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Glass Ui CSS properities */
+:root{
+  ---backdrop-filter: blur(16px) saturate(180%);
+  ---backdrop-blur: 16px;
+  ---backdrop-saturate: 180%;
+  ---background-color: rgba(17, 25, 40, 0.75);
+  ---border-radius: 12px;
+  ---border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* basic css styling */
+body{
+  background: rgb(4, 14, 14);
+  font-family: 'JetBrains Mono', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* .input and .btn use CSS properities for glass ui */
+.input{
+  background: var(---background-color);
+  border: var(---border);
+  border-radius: var(---border-radius);
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color);
+  color: white;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  width: 85%;
+}
+
+input:focus{
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: scale(1.1);
+  animation-name: bounce;
+}
+
+.btn{
+  background: var(---background-color);
+  border: var(---border);
+  border-radius: var(---border-radius);
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color);
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  transform: scale(0.95);
+  transition: 100ms ease-in-out;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  margin-top: 15px;
+}
+
+.btn:hover{
+  background-color: rgba(33, 44, 92, 0.562);
+  transform: scale(1);
+  animation-name: bounce;
+}
+
+@keyframes bounce{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.container{
+  /* background-color: var(---background-color); */
+  border-radius: var(---border-radius);
+  /* box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color); */
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+h1{
+  text-align: center;
+  margin-top: 2rem;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Poppins';
+}
+
+.icon{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.list{
+  background: none;
+  border: none;
+  border-radius: var(---border-radius);
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color);
+  color: white;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  margin-left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.list li{
+  text-shadow: 0px 0px 3px rgb(255, 255, 255);
+  overflow: auto;
+  text-overflow: clip;
+  white-space: nowrap;
+  scrollbar-width: 1px;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+  scroll-behavior: smooth;
+  margin-top: 0px;
+  display: flex;
+  font-size: 1.5rem;
+  flex-grow: 1;
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color);
+  border-radius: var(---border-radius);
+  background: rgba(17, 25, 40, 0.603);
+  padding: 15px;
+  text-align: center;
+}
+
+.list li.highlighted{
+  background: linear-gradient(to right, #81ca59, #4cc9a3);
+  background: -webkit-linear-gradient(to right, #81ca59, #4cc9a3);
+}
+
+.outercontainer{
+  background: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.innercontainer{
+  flex: 1;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-bottom: 12px;
+  max-height: 300px;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+  scroll-behavior: smooth;
+  text-align: center;
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color);
+  padding: 1rem 1.5rem;
+  border-radius: var(---border-radius);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.swal-popup {
+  /* styles for the popup */
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color) !important;
+  border-radius: var(---border-radius) !important;
+  background: rgb(17, 25, 40) !important;
+  color: white !important;
+}
+
+.confirm-button {
+  /* styles for the confirm button */
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color) !important;
+  border-radius: var(---border-radius) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.input-container{
+  display: flex;
+}
+
+/* .amount input should be small in the side next to the item input as a number picker */
+.amount{
+  width: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: var(---border);
+  background: white;
+  color: white;
+  border-radius: var(---border-radius);
+  box-shadow: var(---backdrop-filter) var(---backdrop-blur) var(---backdrop-saturate) var(---background-color);
+  background: var(---background-color);
+  height: 52px;
+  margin-top: 16px;
+  margin-left: 15px;
+}
+
+.hint-text{
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+
+#amountSpan{
+  color: red;
+}

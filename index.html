@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add to Cart Mobile App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="outercontainer">
+        <h1>Shopping List</h1>
+        <img src="icons8-shopping-cart-64 (1).png" alt="" class="icon" />
+        <div class="input-container">
+          <input
+            type="text"
+            id="add-item"
+            placeholder="Add an item"
+            class="input"
+          />
+          <input
+            type="number"
+            name="amountofitems"
+            id="amount"
+            class="amount"
+          />
+        </div>
+        <div class="button-container">
+          <button id="add-btn" class="btn">Add to Cart</button>
+          <p class='hint-text'>Tap an item to check it!</p>
+        </div>
+      </div>
+      <div class="innercontainer">
+        <ul id="shopping-list" class="list"></ul>
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
